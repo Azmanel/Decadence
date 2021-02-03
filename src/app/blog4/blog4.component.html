@@ -1,0 +1,104 @@
+<div class="header">
+    <ul style="margin: 0;
+    padding: 0">
+        <li class="st"> <img src="../assets/images/logo.png" width="120px" height="40px" alt="lorem"></li>
+        <li><a routerLink="/index">Новости</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Блоги</a>
+            <div class="dropdown-content">
+                <a routerLink="/blogs">История</a>
+                <a routerLink="/blogs">Политика</a>
+                <a routerLink="/blogs">Кульура</a>
+            </div>
+        </li>
+        <li><a routerLink="/info">О проекте</a></li>
+        <li style="float:right;"><button onclick="document.getElementById('id01').style.display='block'"
+                style="width:auto;" class="s">Вход</button></li>
+    </ul>
+</div>
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">×</span>
+        </div>
+
+        <div class="container">
+            <h1 align='center'>Вход</h1>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+                [(ngModel)]="login" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" placeholder="Введите пароль" name="password" id="password" type="password"
+                [(ngModel)]="password" required>
+            <div *ngIf="error_text != 'no_error'" class="log_error">
+                {{error_text}}
+            </div>
+            <button class="sx" id="check" (click)="check()">Войти</button> <button type="button" type='button'
+                onclick="document.getElementById('id02').style.display='block'" class="sz">Зарегистрироваться</button>
+
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn s ">Отмена</button>
+
+        </div>
+    </form>
+
+</div>
+<div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">×</span>
+        </div>
+
+        <div class="container">
+            <h1 align='center'>Регистрация</h1>
+            <label for="uname"><b>Почта</b></label>
+            <input class="s" type="text" placeholder="Введите почту" id="mail" name="mail" [(ngModel)]="mail" required>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+                [(ngModel)]="login" required>
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" id="password" name="password" [(ngModel)]="password" type="password"
+                placeholder="Введите пароль" required>
+            <input id="confirm_password" name="confirm_password" [(ngModel)]="password_confirm" type="password"
+                placeholder="Повтор пароля" required>
+            <div *ngIf="error_text != 'no_error'" class="reg_error">
+                {{error_text}}
+            </div>
+
+            <button class="s" (click)="regFunction()">Создать
+                аккаунт</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                class="cancelbtn s ">Отмена</button>
+
+        </div>
+    </form>
+
+</div>
+
+<div class="bli">
+    <h1> Постирония</h1>
+
+    <img src="../assets/images/ost.jpg" width="100%" height="500px" alt="lorem">
+    <h1>Постирония</h1>
+    <p>Постирония — своеобразный апгрейд постмодернистской иронии — наиболее фундаментальное свойство метамодерна.</p>
+    <p>Постиронию можно определить как двойной переворот высказывания: прямой месседж сначала иронически переворачивается, а потом как будто переворачивается еще раз, обретая новую прямоту. Если ироническое высказывание притворяется, что оно — правда (и тем самым опровергает высказанное), то постироническое притворяется, что оно — неправда (и тем самым высказанное подтверждает).</p>
+    <p>В постиронии ирония постмодерна преодолевается, но остается глубоко внутри как составная часть сложного высказывания: метамодерн устает от иронии постмодерна, но уже не может смотреть на мир без нее — поэтому ирония продолжает быть в него включена.</p>
+    <p>Теоретики говорят об осцилляции как важнейшем для метамодерна понятии — имея в виду смысловые колебания между прямым высказыванием и иронией. Однако привлечение понятия «колебание» представляется не совсем точным: в метамодерне прямое высказывание и ирония не сменяют друг друга, а сосуществуют в единстве.</p>
+    <p>В музыке постиронии легче всего проявиться в вокальных произведениях, где есть возможность смыслового «натяжения» между музыкой и текстом. В этом — одна из причин актуализации жанра песни в эпоху метамодерна; другая причина — в том, что именно в песне зачастую происходит радикальное сближение массового и элитарного при попытке выразить некий универсальный код.</p>
+    <p>Такова «Песня колхозника о Москве» Леонида Десятникова, метамодернистски воспроизводящая советский хит. В то время как постмодернистский жест предложил бы иронию над песней, постироническая метамодернистская транскрипция Десятникова открывает в ней новую красоту.</p>
+    <p>Как устроена «Песня колхозника»? Десятниковский жест — подобно жестам Стравинского периода неоклассицизма — интересен не тем, как много композитор изменил в советской песне, а тем, как мало он в ней изменил. В отличие от Стравинского, который менял в музыке Перголези гармонию, ритм, оркестровку, Десятников, наоборот, оставляет неизменными мелодию, гармонический план, текст: таков «неоклассицизм» эры постиронии.</p>
+    <p>Изменяемым пластом в «Песне» становится исполнительская манера певицы Ольги Дзусовой, остающейся за кадром фильма: «неправильное», «детское» пение со сбитым дыханием, берущимся посреди слова, и новой страшной прямотой. Это не что иное, как русское юродство, обращенное на этот раз не к пространству православной церкви, а к сакрализованному (по крайней мере, внутри «Песни колхозника») языковому пространству Soviet art.</p>
+    <p>«Песня колхозника о Москве» — знаковое произведение для постсоветского музыкального пространства: не только в эпохе метамодерна, но, наверное, и вообще в музыке последних десятилетий мало что может сравниться с ней в красоте и беспощадности. Написанная в 2000 году для фильма Александра Зельдовича с «иероглифическим» названием «Москва», эта музыка стала своего рода метаплакатом — многомерным манифестом, выражающим сверхсмыслы через простейшие архетипические языковые формулы.</p>
+
+</div>

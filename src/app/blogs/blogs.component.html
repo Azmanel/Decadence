@@ -1,0 +1,231 @@
+<div class="header">
+    <ul style="margin: 0;
+    padding: 0">
+      <li class="st"> <img src="../assets/images/logo.png"  
+        width="120px" height="40px" alt="Baretsky"></li>
+      <li><a routerLink ="/index">Новости</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Блоги</a>
+        <div class="dropdown-content">
+          <a routerLink ="/blogs">История</a>
+          <a routerLink ="/blogs">Политика</a>
+          <a routerLink ="/blogs">Кульура</a>
+        </div>
+      </li>
+      <li><a routerLink ="/info">О проекте</a></li>
+      <li style="float:right;"><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="s">Вход</button></li>
+  </ul>
+</div>
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Close Modal">×</span>
+    </div>
+
+    <div class="container">
+      <h1 align='center'>Вход</h1>
+      <label for="uname"><b>Имя пользователя</b></label>
+      <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+        [(ngModel)]="login" required>
+
+      <label for="psw"><b>Пароль</b></label>
+      <input class="s" placeholder="Введите пароль" name="password" id="password" type="password"
+        [(ngModel)]="password" required>
+      <div *ngIf="error_text != 'no_error'" class="log_error">
+        {{error_text}}
+      </div>
+      <button class="sx" id="check" (click)="check()">Войти</button> <button type="button"  type='button'
+        onclick="document.getElementById('id02').style.display='block'" class="sz">Зарегистрироваться</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'"
+        class="cancelbtn s ">Отмена</button>
+
+    </div>
+  </form>
+
+</div>
+<div id="id02" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close"
+        title="Close Modal">×</span>
+    </div>
+
+    <div class="container">
+      <h1 align='center'>Регистрация</h1>
+      <label for="uname"><b>Почта</b></label>
+      <input class="s" type="text" placeholder="Введите почту" id="mail" name="mail" [(ngModel)]="mail" required>
+      <label for="uname"><b>Имя пользователя</b></label>
+      <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+        [(ngModel)]="login" required>
+      <label for="psw"><b>Пароль</b></label>
+      <input class="s" id="password" name="password" [(ngModel)]="password" type="password"
+        placeholder="Введите пароль" required>
+      <input id="confirm_password" name="confirm_password" [(ngModel)]="password_confirm" type="password"
+        placeholder="Повтор пароля" required>
+      <div *ngIf="error_text != 'no_error'" class="reg_error">
+        {{error_text}}
+      </div>
+
+      <button class="s" (click)="regFunction()"
+        >Создать аккаунт</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'"
+        class="cancelbtn s ">Отмена</button>
+
+    </div>
+  </form>
+
+</div>
+<div>
+  <div class="osnovab ">
+    <div class="pr">
+      <div class="pustoy">
+      </div>
+      <h1 align = "center"> Блоги</h1>
+    </div>
+    <div class="bl">
+      <div class="fullpage otstup">
+        <div class="osnovab otstup">
+          <div class="blogs">
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+              <a routerLink ="/blog" class="img__link"> <img src="../assets/images/Baretskiy.jpg" width="230px" height="150px" alt="Baretsky"></a>
+            </div>
+            <div class="txt"> <a routerLink ="/blog">Жизнь и творчество Стаса  Барецкого </a></div>
+            <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog1" class="img__link"> <img src="../assets/images/jvanec.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog1">Личная  оценка творчества Жванецкого спустя годы </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog2" class="img__link"> <img src="../assets/images/stand.jpg" width="230px" height="150px" alt="none"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog2">Короткая статья про российский стэндап </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog4" class="img__link"> <img src="../assets/images/ost.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog4">Небольшой разбор понятия постиронии</a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+              <a routerLink ="/blog" class="img__link"> <img src="../assets/images/Baretskiy.jpg" width="230px" height="150px" alt="Baretsky"></a>
+            </div>
+            <div class="txt"> <a routerLink ="/blog">Жизнь и творчество Стаса  Барецкого </a></div>
+            <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog1" class="img__link"> <img src="../assets/images/jvanec.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog1">Личная  оценка творчества Жванецкого спустя годы </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog4" class="img__link"> <img src="../assets/images/ost.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog4">Небольшой разбор понятия постиронии</a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                
+                <a routerLink ="/blog2" class="img__link"> <img src="../assets/images/stand.jpg" width="230px" height="150px" alt="none"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog2">Короткая статья про российский стэндап </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog4" class="img__link"> <img src="../assets/images/ost.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog4">Небольшой разбор понятия постиронии</a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+              <a routerLink ="/blog" class="img__link"> <img src="../assets/images/Baretskiy.jpg" width="230px" height="150px" alt="Baretsky"></a>
+            </div>
+            <div class="txt"> <a routerLink ="/blog">Жизнь и творчество Стаса  Барецкого </a></div>
+            <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog1" class="img__link"> <img src="../assets/images/jvanec.jpg" width="230px" height="150px" alt="Baretsky"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog1">Личная  оценка творчества Жванецкого спустя годы </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                <a routerLink ="/blog2" class="img__link"> <img src="../assets/images/stand.jpg" width="230px" height="150px" alt="none"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog2">Короткая статья про российский стэндап </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+              <a routerLink ="/blog" class="img__link"> <img src="../assets/images/Baretskiy.jpg" width="230px" height="150px" alt="Baretsky"></a>
+            </div>
+            <div class="txt"> <a routerLink ="/blog">Жизнь и творчество Стаса  Барецкого </a></div>
+            <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+            <div class="blog">
+              <div class=" otstup" align = "center ">
+                
+                
+                <a routerLink ="/blog2" class="img__link"> <img src="../assets/images/stand.jpg" width="230px" height="150px" alt="none"></a>
+              </div>
+              <div class="txt"> <a routerLink ="/blog2">Короткая статья про российский стэндап </a></div>
+              <div class="pdp" style="float:right;"> <a routerLink ="/editor">Петр Жуть</a></div>
+            </div>
+
+                
+
+            
+
+                
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

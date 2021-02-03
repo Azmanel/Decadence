@@ -1,0 +1,85 @@
+<div class="header">
+    <ul style="margin: 0;
+    padding: 0">
+        <li class="st"> <img src="../assets/images/logo.png" width="120px" height="40px" alt="lorem"></li>
+        <li><a routerLink="/index">Новости</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Блоги</a>
+            <div class="dropdown-content">
+                <a routerLink="/blogs">История</a>
+                <a routerLink="/blogs">Политика</a>
+                <a routerLink="/blogs">Кульура</a>
+            </div>
+        </li>
+        <li><a routerLink="/info">О проекте</a></li>
+        <li style="float:right;"><button onclick="document.getElementById('id01').style.display='block'"
+                style="width:auto;" class="s">Вход</button></li>
+    </ul>
+</div>
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">×</span>
+        </div>
+
+        <div class="container">
+            <h1 align='center'>Вход</h1>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" name="name" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" type="password" placeholder="Введите пароль" name="psw" required>
+
+            <button class="sx" type="submit">Войти</button> <button type="button"
+                onclick="document.getElementById('id02').style.display='block'" class="sz">Зарегистрироваться</button>
+            <label>
+                <input class="s" type="checkbox" checked="checked" name="remember"> Запомнить меня
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn s ">Отмена</button>
+
+        </div>
+    </form>
+
+</div>
+<div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                title="Close Modal">×</span>
+        </div>
+
+        <div class="container">
+            <h1 align='center'>Регистрация</h1>
+            <label for="uname"><b>Почта</b></label>
+            <input class="s" type="text" placeholder="Введите почту" name="mail" required>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" name="name" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" type="password" placeholder="Введите пароль" name="psw" required>
+
+            <button class="s" type="submit">Создать аккаунт</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                class="cancelbtn s ">Отмена</button>
+
+        </div>
+    </form>
+
+</div>
+
+<div class="bli">
+    <h1> Жванецкий</h1>
+    
+        <img src="../assets/images/jvanec.jpg" width="100%" height="500px" alt="lorem">
+
+</div>

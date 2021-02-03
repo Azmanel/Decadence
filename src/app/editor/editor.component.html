@@ -1,0 +1,167 @@
+<div class="grey">
+    <div class="header">
+        <ul style="margin: 0;
+    padding: 0">
+            <li class="st"> <img src="../assets/images/logo.png" width="120px" height="40px" alt="lorem"></li>
+            <li><a routerLink="/index">Новости</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Блоги</a>
+                <div class="dropdown-content">
+                    <a routerLink="/blogs">История</a>
+                    <a routerLink="/blogs">Политика</a>
+                    <a routerLink="/blogs">Кульура</a>
+                </div>
+            </li>
+            <li><a routerLink="/info">О проекте</a></li>
+            <li style="float:right;"><button onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto;" class="s">Вход</button></li>
+        </ul>
+    </div>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+              title="Close Modal">×</span>
+          </div>
+  
+          <div class="container">
+            <h1 align='center'>Вход</h1>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+              [(ngModel)]="login" required>
+  
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" placeholder="Введите пароль" name="password" id="password" type="password"
+              [(ngModel)]="password" required>
+            <div *ngIf="error_text != 'no_error'" class="log_error">
+              {{error_text}}
+            </div>
+            <button class="sx" id="check" (click)="check()">Войти</button> <button type="button"  type='button'
+              onclick="document.getElementById('id02').style.display='block'" class="sz">Зарегистрироваться</button>
+            
+          </div>
+  
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn s ">Отмена</button>
+  
+          </div>
+        </form>
+  
+      </div>
+      <div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close"
+              title="Close Modal">×</span>
+          </div>
+  
+          <div class="container">
+            <h1 align='center'>Регистрация</h1>
+            <label for="uname"><b>Почта</b></label>
+            <input class="s" type="text" placeholder="Введите почту" id="mail" name="mail" [(ngModel)]="mail" required>
+            <label for="uname"><b>Имя пользователя</b></label>
+            <input class="s" type="text" placeholder="Введите имя пользователя" id="login" name="login"
+              [(ngModel)]="login" required>
+            <label for="psw"><b>Пароль</b></label>
+            <input class="s" id="password" name="password" [(ngModel)]="password" type="password"
+              placeholder="Введите пароль" required>
+            <input id="confirm_password" name="confirm_password" [(ngModel)]="password_confirm" type="password"
+              placeholder="Повтор пароля" required>
+            <div *ngIf="error_text != 'no_error'" class="reg_error">
+              {{error_text}}
+            </div>
+  
+            <button class="s" (click)="regFunction()"
+              onclick="document.getElementById('id02').style.display='none'">Создать аккаунт</button>
+          </div>
+  
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+              class="cancelbtn s ">Отмена</button>
+  
+          </div>
+        </form>
+  
+      </div>
+
+    <div class="fullpage otstup">
+        <div class="osnova ">
+            <div class="pro">
+                <div class="prof">
+                    <div class="j"> <img src="../assets/images/s1200.jpg" width="300px" height="460px" alt="lorem">
+                    </div>
+                    <div class="jsd" id="center">
+                        <h1>Петр Степанович Жуть</h1>
+                    </div>
+                </div>
+                <div class="profr">
+                    <div class="jsd" id="center">
+                        <h2>Статьи:</h2>
+                    </div>
+                    <a routerLink="/blog">
+                        <div class="blockst">
+                            <h3>Стас Барецкий</h3>
+                        </div>
+                    </a>
+                    <a routerLink="/blog1">
+                        <div class="blockst">
+                            <h3>Жванецкий</h3>
+                        </div>
+                    </a>
+                    <a routerLink="/blog2">
+                        <div class="blockst">
+                            <h3>Российский стэндап</h3>
+                        </div>
+                    </a>
+                    <a routerLink="/blog4">
+                        <div class="blockst">
+                            <h3>Постирония</h3>
+                        </div>
+                    </a>
+                    <a routerLink="/blog">
+                        <div class="blockst">
+                            <h3>Стас Барецкий</h3>
+                        </div>
+                    </a>
+                    <a routerLink="/blog">
+                        <div class="blockst">
+                            <h3>Стас Барецкий</h3>
+                        </div>
+                    </a>
+
+
+
+
+                </div>
+            </div>
+            <div class="jn">
+                <h1 id="center"> Немного об авторе</h1>
+                <p class="about">
+                    Дата рождения: 14.08.1988
+                </p>
+                <p class="about">
+                    Религия: Православие
+                </p>
+                <p class="about">
+                    Полит. взгляды: Консервативные
+                </p>
+                <p class="about">
+                    Места публикаций: Журнал "Панорама"
+                </p>
+                <p class="about">
+                    Контакты: <a href="https://vk.com/durov">Вконтакте</a>
+                </p>
+                <p class="about">
+                    Страна проживания: Израиль
+                </p>
+                <p class="about">
+                    Должность: Главный редакторор сайта "Декаданс"
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
